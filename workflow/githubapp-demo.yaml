@@ -1,7 +1,9 @@
 name: GitHub App Demo
 
 on:
-  workflow_dispatch:
+  push:
+    branches:
+      - main
 
 jobs:
   github-app-auth:
