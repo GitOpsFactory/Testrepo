@@ -1,29 +1,17 @@
-name: Self Hosted Runner Test
+name: Self Hosted Runner Workflow
 
 on:
-  push:
-    branches:
-      - main
-
+  workflow_dispatch:
 
 jobs:
   test-runner:
-    runs-on: self-hosted
+    runs-on:
+      - self-hosted
+      - Linux
+      - X64
 
     steps:
-      - name: Checkout Code
-        uses: actions/checkout@v4
-
-      - name: Display Runner Information
+      - name: Test
         run: |
-          echo "Runner Name: $RUNNER_NAME"
-          echo "Runner OS: $RUNNER_OS"
-          echo "Runner Architecture: $RUNNER_ARCH"
+          echo "Hello from self-hosted runner"
           hostname
-          pwd
-
-      - name: List Files
-        run: ls -la
-
-      - name: Test Message
-        run: echo "Hello from Self Hosted Runner!"
