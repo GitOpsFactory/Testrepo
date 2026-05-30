@@ -19,5 +19,3 @@ jobs:
           whoami
           kubectl version --client
           docker --version
-
-   
