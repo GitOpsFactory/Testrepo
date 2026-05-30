@@ -6,7 +6,7 @@ on:
       - Day07
 
 jobs:
-  build-test-push:
+  Test-self-hosted:
     runs-on: self-hosted
 
     steps:
